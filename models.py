@@ -11,3 +11,6 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(128))
     name = db.Column(db.String(256))
 
+class Symbol(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    symbol = db.Column(db.String(16))

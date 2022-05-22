@@ -39,6 +39,12 @@
                                 Logout
                             </a>
                             {% endif %}
+                            <a href="{{ url_for('symbol.index') }}" class="navbar-item">
+                                Symbols
+                            </a>
+                            <a href="{{ url_for('symbol.create') }}" class="navbar-item">
+                                Create Symbol
+                            </a>
                         </div>
                     </div>
                 </div>

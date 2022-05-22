@@ -12,6 +12,7 @@ from flask_login import LoginManager
 # Routes
 from routes.auth import auth as auth_blueprint
 from routes.main import main as main_blueprint
+from routes.symbol import symbol as symbol_blueprint
 
 # Migrations
 from flask_migrate import Migrate
@@ -42,8 +43,8 @@ db.init_app(app)
 from models import User
 
 app.register_blueprint(auth_blueprint)
-
 app.register_blueprint(main_blueprint)
+app.register_blueprint(symbol_blueprint)
 
 migrate = Migrate(app, db)
 
