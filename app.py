@@ -32,6 +32,8 @@ db_user = os.environ.get('TMT_DB_USER')
 db_password = os.environ.get('TMT_DB_PASSWORD')
 db_host = os.environ.get('TMT_DB_HOST')
 db_database = os.environ.get('TMT_DB_DATABASE')
+if 'TMT_DB_PORT' in os.environ:
+    db_host += ":" + os.environ.get('TMT_DB_PORT')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://{}:{}@{}/{}'.format(db_user, db_password, db_host, db_database)
 
 # Middlware utilization. REMEMBER: this code always must be used
