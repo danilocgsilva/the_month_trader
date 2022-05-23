@@ -1,0 +1,30 @@
+{
+  "name": "the_month_trader",
+  "version": "1.0.0",
+  "description": "Personal stock market watcher and manager for personal usage.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilocgsilva/the_month_trader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danilocgsilva/the_month_trader/issues"
+  },
+  "homepage": "https://github.com/danilocgsilva/the_month_trader#readme",
+  "devDependencies": {
+    "bulma": "^0.9.4",
+    "css-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
