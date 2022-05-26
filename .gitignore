@@ -4,3 +4,4 @@ migrations/__pycache__/*
 node_modules/*
 static/js/bundle.js
 static/css/styles.css
+.idea
