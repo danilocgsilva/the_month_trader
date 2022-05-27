@@ -1,7 +1,15 @@
 @charset "utf-8";
 @import "~bulma/bulma";
+
 .navbar-menu {
     a.navbar-item {
         color: #333;
+    }
+}
+
+.notification {
+    padding: 0.7em;
+    &.form-notification-normal {
+        margin-bottom: 0.7em;
     }
 }

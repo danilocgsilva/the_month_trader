@@ -17,7 +17,8 @@ from flask import \
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import User
 from app import db
-from flask_login import login_user, logout_user, login_required, current_user
+from flask_login import login_user, logout_user, login_required
+from routes.commons import hidden_to_logged
 
 auth = Blueprint('auth', __name__)
 
@@ -75,7 +76,5 @@ def logout():
     logout_user()
     return redirect(url_for('main.index'))
 
-def hidden_to_logged():
-    if current_user.is_authenticated:
-        return redirect(url_for('main.profile'))
+
 

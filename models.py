@@ -10,6 +10,7 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(128), unique=True)
     password = db.Column(db.String(128))
     name = db.Column(db.String(256))
+    registered = db.Column(db.Date)
 
 class Symbol(db.Model):
     id = db.Column(db.Integer, primary_key=True)

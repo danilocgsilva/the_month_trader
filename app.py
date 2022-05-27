@@ -24,7 +24,6 @@ import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('TMT_SECRET_KEY')
 
-
 db_user = os.environ.get('TMT_DB_USER')
 db_password = os.environ.get('TMT_DB_PASSWORD')
 db_host = os.environ.get('TMT_DB_HOST')

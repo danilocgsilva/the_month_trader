@@ -2,6 +2,13 @@
 
 {% block content %}
 <h1 class="title">
-  Here is the list of symbols.
+  Symbols registered
 </h1>
+
+<ul>
+  {% for model in models %}
+  <li>{{ model.symbol }}</li>
+  {% endfor %}
+</ul>
+
 {% endblock %}

@@ -2,20 +2,34 @@
 
 {% block content %}
 
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div class="notification is-primary form-notification-normal">
+        {{ messages[0] }}
+    </div>
+{% else %}
+    <div class="notification is-invisible form-notification-normal">
+      &nbsp;
+    </div>
+{% endif %}
+{% endwith %}
+
 <h3 class="title">
   Add a symbol
 </h1>
 
 <div class="column is-12 is-offset">
+
+  
     <form method="POST" action="/symbol">
 
       <div class="field">
         <div class="control">
-          <input type="text" class="input is-large">
+          <input name="symbol" type="text" class="input">
         </div>
       </div>
 
-      <button class="button is-block is-info is-large is-fullwidth">Add</button>
+      <button class="button is-block is-info is-fullwidth">Add</button>
 
     </form>
 </div>
