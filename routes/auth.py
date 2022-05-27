@@ -17,13 +17,21 @@ from flask import \
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import User
 from app import db
-from flask_login import login_user, logout_user, login_required
+from flask_login import login_user, logout_user, login_required, current_user
 
 auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
 def login():
+    hidden_to_logged()
+
     return render_template('login.html')
+
+@auth.route('/signup')
+def signup():
+    hidden_to_logged()
+
+    return render_template('signup.html')
 
 @auth.route('/login', methods=['POST'])
 def login_post():
@@ -40,9 +48,7 @@ def login_post():
     login_user(user, remember=remember)
     return redirect(url_for('main.profile'))
 
-@auth.route('/signup')
-def signup():
-    return render_template('signup.html')
+
 
 @auth.route('/signup', methods=['POST'])
 def signup_post():
@@ -69,4 +75,7 @@ def logout():
     logout_user()
     return redirect(url_for('main.index'))
 
+def hidden_to_logged():
+    if current_user.is_authenticated:
+        return redirect(url_for('main.profile'))
 

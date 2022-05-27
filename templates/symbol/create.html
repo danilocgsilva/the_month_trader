@@ -1,7 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Lets create a new symbol
+
+<h3 class="title">
+  Add a symbol
 </h1>
+
+<div class="column is-12 is-offset">
+    <form method="POST" action="/symbol">
+
+      <div class="field">
+        <div class="control">
+          <input type="text" class="input is-large">
+        </div>
+      </div>
+
+      <button class="button is-block is-info is-large is-fullwidth">Add</button>
+
+    </form>
+</div>
 {% endblock %}

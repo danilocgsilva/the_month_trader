@@ -1,2 +1,7 @@
 @charset "utf-8";
 @import "~bulma/bulma";
+.navbar-menu {
+    a.navbar-item {
+        color: #333;
+    }
+}
